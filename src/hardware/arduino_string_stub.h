@@ -386,6 +386,12 @@ inline String StringFromCharArray(const char *str) { return String(str); }
 // Макрос F() - на ПК просто возвращает строку
 #define F(str) (str)
 
+// Поддержка вывода в std::ostream для удобства тестов (std::cout)
+inline std::ostream &operator<<(std::ostream &os, const String &s) {
+  return os << s.c_str();
+}
+
+
 #endif
 
 #endif // ARDUINO_STRING_STUB_H

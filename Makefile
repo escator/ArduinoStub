@@ -13,7 +13,7 @@ SRCS = src/logic/math_operations.cpp \
 TEST_SRCS = test_string_compatibility.cpp
 
 
-test:
+test_string:
 	${CXX} ${CXXFLAGS} src/test/test_string_compatibility.cpp -o ${PATH_TARGET}out
 	${PATH_TARGET}out
 
